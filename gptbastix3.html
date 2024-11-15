@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Brass Band's Website</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf5e6;
+            color: #333;
+        }
+        header, footer {
+            background: linear-gradient(90deg, #d4af37, #c09040);
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
+        header img {
+            max-width: 100px;
+            border-radius: 50%;
+        }
+        nav a {
+            margin: 0 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+        section {
+            margin-bottom: 3em;
+            padding: 2em;
+            border-radius: 20px;
+            background: #fff8dc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #b8860b;
+        }
+        .horizontal-scroll {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 10px;
+        }
+        .blog-post {
+            min-width: 300px;
+            background-color: white;
+            border: 2px solid #d4af37;
+            border-radius: 10px;
+            padding: 1em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 200px;
+            margin: 10px;
+            border: 2px solid #d4af37;
+            border-radius: 10px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea {
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #d4af37;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px;
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        footer img {
+            max-width: 50px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://via.placeholder.com/100" alt="Band Logo">
+    <h1>BOMBRASSTIX</h1>
+    <nav>
+        <a href="#news">News</a>
+        <a href="#events">Events</a>
+        <a href="#gallery">Photos</a>
+        <a href="#archive">Archive</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <section id="news">
+        <h2>Latest News</h2>
+        <div class="horizontal-scroll">
+            <div class="blog-post">
+                <h3>Blog Post 1</h3>
+                <p>Details about the first blog post...</p>
+            </div>
+            <div class="blog-post">
+                <h3>Blog Post 2</h3>
+                <p>Details about the second blog post...</p>
+            </div>
+            <div class="blog-post">
+                <h3>Blog Post 3</h3>
+                <p>Details about the third blog post...</p>
+            </div>
+            <div class="blog-post">
+                <h3>Blog Post 4</h3>
+                <p>Details about the fourth blog post...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li><strong>Event Name</strong> - Date, Location</li>
+            <li><strong>Another Event</strong> - Date, Location</li>
+        </ul>
+    </section>
+
+    <section id="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/200" alt="Placeholder Image 1">
+            <img src="https://via.placeholder.com/200" alt="Placeholder Image 2">
+            <img src="https://via.placeholder.com/200" alt="Placeholder Image 3">
+        </div>
+    </section>
+
+    <section id="archive">
+        <h2>Archive</h2>
+        <p>Explore past events, news, and blog posts.</p>
+        <ul>
+            <li><a href="#">Older Post 1</a></li>
+            <li><a href="#">Older Post 2</a></li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form" onsubmit="sendEmail(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+</div>
+
+<footer>
+    <img src="https://via.placeholder.com/50" alt="Footer Logo">
+    <p>&copy; 2024 Your Brass Band. All rights reserved.</p>
+</footer>
+
+<script>
+    function sendEmail(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        const mailtoLink = `mailto:nox208421@gmail.com?subject=Message from ${name}&body=Email: ${email}%0D%0A%0D%0A${message}`;
+        window.location.href = mailtoLink;
+    }
+</script>
+
+</body>
+</html>
