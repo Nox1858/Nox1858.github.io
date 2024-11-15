@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOMBRASSTIX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #fffaf0, #f7e1b8);
+            color: #333;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 {
+            font-family: 'Marcellus', serif;
+            color: #b8860b;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background: url('https://via.placeholder.com/1920x500') no-repeat center center / cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+        header p {
+            font-size: 1.5rem;
+            margin: 10px 0 20px;
+        }
+        header button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background: #b8860b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        header button:hover {
+            background: #d4af37;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 239, 196, 0.9);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            font-weight: bold;
+            padding: 10px;
+            transition: color 0.3s ease, background 0.3s ease;
+        }
+        nav a:hover {
+            background: #b8860b;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 50px 20px;
+            margin: 20px 0;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .parallax {
+            background: url('https://via.placeholder.com/1920x500') no-repeat center center / cover;
+            height: 300px;
+            margin: 20px 0;
+        }
+
+        /* Blog Section */
+        .blog-posts {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 10px;
+        }
+        .blog-post {
+            flex: 0 0 300px;
+            background: #fffaf0;
+            border: 1px solid #b8860b;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .blog-post:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Gallery */
+        .gallery img {
+            width: calc(33% - 10px);
+            margin: 5px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Contact */
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #b8860b;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .contact-form button:hover {
+            background: #d4af37;
+        }
+
+        /* Footer */
+        footer {
+            background: #b8860b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to BOMBRASSTIX</h1>
+    <p>Experience the music, the passion, the soul.</p>
+    <button onclick="scrollToSection('news')">Discover More</button>
+</header>
+
+<nav>
+    <a href="#news">News</a>
+    <a href="#events">Events</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="news">
+    <h2>Latest News</h2>
+    <div class="blog-posts">
+        <div class="blog-post">
+            <h3>Blog Title 1</h3>
+            <p>Some exciting updates...</p>
+        </div>
+        <div class="blog-post">
+            <h3>Blog Title 2</h3>
+            <p>More news about the band...</p>
+        </div>
+        <div class="blog-post">
+            <h3>Blog Title 3</h3>
+            <p>Behind-the-scenes stories...</p>
+        </div>
+    </div>
+</section>
+
+<section id="events">
+    <h2>Upcoming Events</h2>
+    <p>Stay tuned for our next concert!</p>
+</section>
+
+<div class="parallax"></div>
+
+<section id="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+        <img src="https://via.placeholder.com/400" alt="Gallery Image 1">
+        <img src="https://via.placeholder.com/400" alt="Gallery Image 2">
+        <img src="https://via.placeholder.com/400" alt="Gallery Image 3">
+    </div>
+</section>
+
+<style>
+    #instagram-feed {
+        background: #fffaf0;
+        padding: 30px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        max-width: 800px;
+    }
+    .instagram-posts blockquote {
+        margin: 10px auto;
+        max-width: 400px;
+    }
+</style>
+
+
+<section id="instagram-feed">
+    <h2>Our Instagram Feed</h2>
+    <div class="instagram-posts">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CODE/" data-instgrm-version="14"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CODE/" data-instgrm-version="14"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CODE/" data-instgrm-version="14"></blockquote>
+    </div>
+    <p style="text-align:center;">
+        <a href="https://www.instagram.com/your-band-handle/" target="_blank" style="color: #b8860b; text-decoration: none; font-weight: bold;">Follow us on Instagram</a>
+    </p>
+</section>
+
+<script async src="https://www.instagram.com/embed.js"></script>
+
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form" onsubmit="sendEmail(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 BOMBRASSTIX. All rights reserved.</p>
+</footer>
+
+<script>
+    function sendEmail(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const mailtoLink = `mailto:example@example.com?subject=Message from ${name}&body=Email: ${email}%0D%0A%0D%0A${message}`;
+        window.location.href = mailtoLink;
+    }
+
+    function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
